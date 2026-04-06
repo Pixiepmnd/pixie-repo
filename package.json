@@ -10,24 +10,38 @@
     "blockchain",
     "cryptocurrency",
     "natural-language",
-    "defi"
+    "defi",
+    "web3",
+    "jupiter",
+    "jito",
+    "mev-protection",
+    "swap",
+    "stake"
   ],
-  "homepage": "https://github.com/pixie/pixie#readme",
+  "homepage": "https://www.pixiedefi.space",
   "bugs": {
-    "url": "https://github.com/pixie/pixie/issues"
+    "url": "https://github.com/Pixiepmnd/pixie-repo/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pixie/pixie.git"
+    "url": "git+https://github.com/Pixiepmnd/pixie-repo.git"
   },
   "license": "MIT",
   "author": {
     "name": "Pixie Team",
-    "email": "team@pixie.dev"
+    "email": "team@pixiedefi.space",
+    "url": "https://www.pixiedefi.space"
   },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
     "dist",
     "README.md",
@@ -35,16 +49,21 @@
   ],
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc && cargo build --release",
+    "build": "npm run build:ts && npm run build:rust",
     "build:rust": "cargo build --release",
     "build:ts": "tsc",
+    "build:watch": "tsc --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
     "format": "prettier --write \"src/**/*.ts\"",
-    "type-check": "tsc --noEmit"
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build && npm test"
   },
   "dependencies": {
     "@solana/web3.js": "^1.87.6",
@@ -59,6 +78,7 @@
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
     "@vitest/coverage-v8": "^1.0.4",
+    "@vitest/ui": "^1.0.4",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.1.1",

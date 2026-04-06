@@ -11,7 +11,7 @@
 [![Jito](https://img.shields.io/badge/Jito-MEV%20Protection-red)](https://jito.wtf/)
 
 [![GitHub](https://img.shields.io/badge/GitHub-Pixiepmnd-181717?logo=github)](https://github.com/Pixiepmnd/pixie-repo)
-[![Twitter](https://img.shields.io/badge/Twitter-@PixieDeFI-1DA1F2?logo=twitter)](https://x.com/PixieDeFI)
+[![Twitter](https://img.shields.io/badge/Twitter-@PixieDeFI-1DA1F2?logo=twitter)](https://x.com/PixieDeFIApp)
 [![Telegram](https://img.shields.io/badge/Telegram-PixieDeFI-26A5E4?logo=telegram)](https://t.me/PixieDeFI)
 [![Website](https://img.shields.io/badge/Website-pixiedefi.space-4285F4?logo=google-chrome)](https://www.pixiedefi.space)
 
@@ -279,7 +279,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 - **Issues**: [GitHub Issues](https://github.com/Pixiepmnd/pixie-repo/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/Pixiepmnd/pixie-repo/discussions)
 - **Telegram**: [PixieDeFI Community](https://t.me/PixieDeFI)
-- **Twitter**: [@PixieDeFI](https://x.com/PixieDeFI)
+- **Twitter**: [@PixieDeFI](https://x.com/PixieDeFIApp)
 - **Website**: [pixiedefi.space](https://www.pixiedefi.space)
 - **Email**: support@pixiedefi.space
 

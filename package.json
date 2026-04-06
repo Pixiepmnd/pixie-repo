@@ -1,0 +1,73 @@
+{
+  "name": "pixie-wallet-bot",
+  "version": "0.1.0",
+  "description": "AI-powered Solana wallet chatbot with natural language transaction processing",
+  "keywords": [
+    "solana",
+    "wallet",
+    "chatbot",
+    "ai",
+    "blockchain",
+    "cryptocurrency",
+    "natural-language",
+    "defi"
+  ],
+  "homepage": "https://github.com/pixie/pixie#readme",
+  "bugs": {
+    "url": "https://github.com/pixie/pixie/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixie/pixie.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Pixie Team",
+    "email": "team@pixie.dev"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc && cargo build --release",
+    "build:rust": "cargo build --release",
+    "build:ts": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "@solana/spl-token": "^0.3.9",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "openai": "^4.20.1",
+    "bs58": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "@vitest/coverage-v8": "^1.0.4",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.1.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

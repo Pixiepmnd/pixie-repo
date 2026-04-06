@@ -1,0 +1,27 @@
+[package]
+name = "pixie-core"
+version = "0.1.0"
+edition = "2021"
+authors = ["Pixie Team <team@pixie.dev>"]
+description = "High-performance Rust core for Pixie wallet operations"
+license = "MIT"
+
+[dependencies]
+solana-sdk = "1.17"
+solana-client = "1.17"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.35", features = ["full"] }
+anyhow = "1.0"
+thiserror = "1.0"
+bs58 = "0.5"
+ed25519-dalek = "2.1"
+
+[lib]
+name = "pixie_core"
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
